@@ -1,0 +1,24 @@
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: flex-start;
+}
+
+.input[data-validate='false'] input{
+    border: 2px solid red;
+}
+.input[data-validate='false']::after{
+    content: 'Not Valid!';
+    color: red;
+    display: block;
+}
+.input[data-validate='true'] input{
+    border: 2px solid green;
+}
+.input[data-validate='true']::after{
+    content: 'Valid';
+    color: green;
+    display: block;
+
+}
